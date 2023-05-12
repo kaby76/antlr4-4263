@@ -1,8 +1,5 @@
 grammar InstrykciyaFunkciya;
-import TokenTipPeremennoy;
-import TokenModificatorVidimosti;
-import Peremenniye;
-import Oglavleniye;
+import TokenTipPeremennoy, TokenModificatorVidimosti, Peremenniye, Oglavleniye;
 
 paraNazvaniyeTipArgumenta: tipPeremennoi probelniy strokoviyIdentifikator;
 perechisleniyeParArgumentov: paraNazvaniyeTipArgumenta (',' probelniy? paraNazvaniyeTipArgumenta)*;

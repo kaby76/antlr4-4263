@@ -1,7 +1,6 @@
 grammar Virajeniya;
 
-import Chisla2;
-import Peremenniye;
+import Chisla2, Peremenniye;
 
 
 virajeniye: virajeniye operaciya=(UMNOJENIYE | DELENIYE | STEPENN) virajeniye // умножение / деление

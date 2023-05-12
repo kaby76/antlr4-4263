@@ -1,8 +1,6 @@
 grammar TokenModifikatory;
 
-import Oglavleniye;
-import TokenModificatorVidimosti;
-import TokenModifikatorKonstantnosti;
+import Oglavleniye, TokenModificatorVidimosti, TokenModifikatorKonstantnosti;
 
 //modifikator: modifikatorVidimosti | modificatorKonstanty;
 

@@ -1,7 +1,5 @@
 grammar InstrykciyaVizovObiekta;
-import Oglavleniye;
-import Peremenniye;
-import Virajeniya;
+import Oglavleniye, Peremenniye, Virajeniya;
 
 argumentVizova: ssilkaNaObiekt | virajeniye;
 argumentyVizova: argumentVizova (',' probelniy argumentVizova)*;

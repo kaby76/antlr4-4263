@@ -1,6 +1,5 @@
 grammar Peremenniye;
-import Chisla2;
-import Oglavleniye;
+import Chisla2, Oglavleniye;
  
 bulevoZnacheniye: TOKEN_BULEVA_ZNACHENIYA_LOJI | TOKEN_BULEVA_ZNACHENIYA_ISTINY;
 

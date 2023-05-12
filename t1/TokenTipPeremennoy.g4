@@ -1,8 +1,5 @@
 grammar TokenTipPeremennoy;
-import Peremenniye;
-import Stroki;
-import Oglavleniye;
-import TokenModificatorVidimosti;
+import Peremenniye, Stroki, Oglavleniye, TokenModificatorVidimosti;
 
 
 tipChislo: CHISLO | NUMBER | TOKEN_TIPA_CHISLA;

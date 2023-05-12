@@ -1,7 +1,5 @@
 grammar Stroki;
-import Chisla2;
-import StrokaFailovyPut;
-import Oglavleniye;
+import Chisla2, StrokaFailovyPut, Oglavleniye;
 
 
 //zZNAKI_A_F_0_9: SHESHNADTCATIRICHNOYE_CHISLO;
