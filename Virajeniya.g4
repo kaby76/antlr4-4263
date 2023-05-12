@@ -1,14 +1,13 @@
 grammar Virajeniya;
 
-import Chisla2;
-import Peremenniye;
+import Chisla2, Peremenniye;
 
 
 virajeniye: virajeniye operaciya=(UMNOJENIYE | DELENIYE | STEPENN) virajeniye // умножение / деление
-		  | virajeniye operaciya=(PLUS | MINUS) 	   			   virajeniye // сложение / вычитание
+		  | virajeniye operaciya=(A_ПЛЮС | A_МИНУС) 	   		   virajeniye // сложение / вычитание
 		  | LEVAYASKOBKA virajeniye PRAVAYASKOBKA
 		  | ssilkaNaObiekt
-		  | polniyVidChisla
+		  | aПолныйВидЧисла
 		 ;
 		 
 		 

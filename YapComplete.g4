@@ -36,7 +36,7 @@ rashireniyeFaila: TOCHKA fragmentputi;
 failovyPut: SOBAKA DELITELPUTI? fragmentputi (DELITELPUTI fragmentputi)*;
 
 // ФАЙЛ ОБЪХЕКТА Stroki
-shestnadcatirichnayaStroka: HEX_PREFIX SHESHNADTCATIRICHNOYE_CHISLO;
+shestnadcatirichnayaStroka: HEX_PREFIX PROBEL A_ШЕСТНАДЦАТИРИЧНЫЕ_СИМВОЛЫ;
 lineynayaStroka: LineynayaStroka1 | LineynayaStroka2;
 mnogostrochnayaStroka: MnogostrochieStroka1 | MnogostrochieStroka2;
 stroka: (shestnadcatirichnayaStroka
@@ -72,10 +72,10 @@ perechisleniyeTipovPremennyh: tipPeremennoi (',' probelniy? tipPeremennoi)*;
 
 // ФАЙЛ ОБЪХЕКТА Virajeniya
 virajeniye: virajeniye operaciya=(UMNOJENIYE | DELENIYE | STEPENN) virajeniye // умножение / деление
-		  | virajeniye operaciya=(PLUS | MINUS) 	   			   virajeniye // сложение / вычитание
+		  | virajeniye operaciya=(A_ПЛЮС | A_МИНУС) 	   		   virajeniye // сложение / вычитание
 		  | LEVAYASKOBKA virajeniye PRAVAYASKOBKA
 		  | ssilkaNaObiekt
-		  | polniyVidChisla;
+		  | aПолныйВидЧисла;
 
 // ФАЙЛ ОБЪХЕКТА TokenModifikatorKonstantnosti
 modificatorKonstanty: KKONSTANTA;
@@ -84,7 +84,7 @@ modificatorKonstanty: KKONSTANTA;
 modifikatorVidimostiKonstantnosti: (modifikatorVidimosti probelniy)? modificatorKonstanty?;
 
 // ФАЙЛ ОБЪХЕКТА Yap
-konstantnoyeZnacheniye: stroka | polniyVidChisla | bulevoZnacheniye;
+konstantnoyeZnacheniye: stroka | aПолныйВидЧисла | bulevoZnacheniye;
 znacheniye: konstantnoyeZnacheniye | strokovayaIndeksaciya | virajeniye;
 prisvoyeniyeZnacheniya: probelniy? '=' probelniy?  znacheniye (',' probelniy znacheniye)*;
 opredeleniyeObjyavleniyePeremennoy:
@@ -131,7 +131,8 @@ W_ДЕВЯТИРИЧНОЕ_ЧИСЛО: W_НОМЕР_НОЛЬ W_НОМЕР_ДЕВ
 ZNAK_EPSILON: ('e' | 'E');
 ZNAKI_A_F: [a-fA-F];
 fragment Xx: [xX];
-W_ШЕСТНАДЦАТИРИЧНОЕ_ЧИСЛО: W_НОМЕР_НОЛЬ Xx PROBEL* (A_ДЕСЯТЕРИЧНОЕ_ЧИСЛО | ZNAKI_A_F)+;
+A_ШЕСТНАДЦАТИРИЧНЫЕ_СИМВОЛЫ: (A_ДЕСЯТЕРИЧНОЕ_ЧИСЛО | ZNAKI_A_F)+;
+W_ШЕСТНАДЦАТИРИЧНОЕ_ЧИСЛО: W_НОМЕР_НОЛЬ Xx PROBEL* A_ШЕСТНАДЦАТИРИЧНЫЕ_СИМВОЛЫ;
 A_МИНУС: '-';
 A_ПЛЮС: '+';
 
@@ -153,7 +154,7 @@ TOKEN_BULEVA_ZNACHENIYA_ISTINY: 'Истина';
 TOKEN_BULEVA_ZNACHENIYA_LOJI: 'Ложь';
 ZNAKI_A_Z_: [a-zA-Z_];
 KVANTIFIKATOR_IDENTIFIKATORA: ZNAKI_A_Z_ |  UTF8CHARSET;
-KVANTIFIKATOR_IDENTIFIKATORA_POLN: KVANTIFIKATOR_IDENTIFIKATORA (DesyaterichniyeChisla | KVANTIFIKATOR_IDENTIFIKATORA)*;
+KVANTIFIKATOR_IDENTIFIKATORA_POLN: KVANTIFIKATOR_IDENTIFIKATORA (A_ДЕСЯТЕРИЧНОЕ_ЧИСЛО | KVANTIFIKATOR_IDENTIFIKATORA)*;
 
 // ФАЙЛ ОБЪХЕКТА TokenModificatorVidimosti
 IYY: 'ый';

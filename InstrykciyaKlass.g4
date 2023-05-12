@@ -1,7 +1,5 @@
 grammar InstrykciyaKlass;
-import Oglavleniye;
-import Peremenniye;
-import TokenModificatorVidimosti;
+import Oglavleniye, Peremenniye, TokenModificatorVidimosti;
 
 
 opredeleniyeKlassa: (modifikatorVidimosti probelniy)?

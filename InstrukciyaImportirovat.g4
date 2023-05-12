@@ -1,7 +1,5 @@
 grammar InstrukciyaImportirovat;
-import Peremenniye;
-import StrokaFailovyPut;
-import Oglavleniye;
+import Peremenniye, StrokaFailovyPut, Oglavleniye;
    
 importirovatKak: TOKEN_KAK probelniy strokovayaIndeksaciya;
 importirovatIz: TOKEN_IZ probelniy ( strokovayaIndeksaciya | failovyPut);

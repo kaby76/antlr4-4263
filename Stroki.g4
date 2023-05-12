@@ -1,12 +1,10 @@
 grammar Stroki;
-import Chisla2;
-import StrokaFailovyPut;
-import Oglavleniye;
+import Chisla2, StrokaFailovyPut, Oglavleniye;
 
 
 //zZNAKI_A_F_0_9: SHESHNADTCATIRICHNOYE_CHISLO;
 //HEX STROKA.
-shestnadcatirichnayaStroka: HEX_PREFIX SHESHNADTCATIRICHNOYE_CHISLO; 
+shestnadcatirichnayaStroka: HEX_PREFIX PROBEL A_ШЕСТНАДЦАТИРИЧНЫЕ_СИМВОЛЫ; 
 
 lineynayaStroka: LineynayaStroka1 | LineynayaStroka2;
 
